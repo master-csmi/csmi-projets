@@ -1,0 +1,14 @@
+:stem: latexmath
+:imagesprefix:
+ifdef::env-github,env-browser,env-vscode[:imagesprefix:]
+
+= Master M1 CSMI {year}
+
+== Projets
+
+include::partial$projets.adoc[]
+
+[bibliography]
+== Références
+
+include::partial$rapports.adoc[]

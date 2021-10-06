@@ -1,0 +1,12 @@
+name: csmi-stages-2021
+title: Master CSMI 2021
+version: master
+start_page: ROOT:index.adoc
+asciidoc: 
+  attributes: 
+    hide-uri-scheme: '' 
+    year: 2021
+nav:
+- modules/ROOT/nav.adoc
+- modules/m1/nav.adoc
+- modules/m2/nav.adoc

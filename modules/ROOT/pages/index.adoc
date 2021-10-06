@@ -1,0 +1,77 @@
+:stem: latexmath
+:experimental: true
+:imagesprefix:
+ifdef::env-github,env-browser,env-vscode[:imagesprefix:]
+:repo: csmi-stages
+:stages-uri: https://github.com/master-csmi/{repo}
+:pr-uri: https://github.com/master-csmi/{repo}/compare
+:pdf-rep: modules/{master}/attachments
+= Master CSMI 
+:page-toclevels: 3
+
+[blockMacroTemplate,par,'year,master']
+----
+* cloner le repository 
+
+[source,shell]
+--
+git clone {stages-uri}
+cd {repo}
+--
+
+* créer la branche `{master}-<votre nom>`
+
+[source,shell]
+--
+git checkout -b `{master}-<votre nom>`
+--
+
+* ajouter votre rapport au répertoire `modules/{master}/attachments/Nom-Prenom.pdf`
+* ajouter votre présentation au répertoire `modules/{master}/attachments/Nom-Prenom-slides.pdf`
+* s'assurer que les PDF correspondent aux liens de votre rapport et présentation dans la page https://master-csmi.github.io/csmi-stages/csmi-stages/{master}/index.html
+* éditer `modules/{master}/partials/rapports.adoc` si besoin pour corriger la référence à votre travail
+* committer vos changements et pousser votre branche sur github 
+
+[source,shell]
+--
+# voir vos changements
+git status
+# commit tous les changements
+git commit -a -m"rapport nom prenom"
+--
+
+* créer un Pull Request sur {pr-uri} en sélectionnant votre branche
+
+NOTE: le PDF de la présentation peut être déposé la veille au soir de la soutenance
+
+----
+
+Ceci est la page principale des rapports de stage de l'année {year} pour les Master 1 et 2 CSMI.
+
+
+== Le travail de stage
+
+Le travail de stage se présentera sous la forme suivante:
+
+* [x] un rapport de stage au format PDF ou un site Antora
+* [x] une présentation au format PDF
+
+Votre travail sera déposé sur le site de l'année correspondante.
+
+=== Comment déposer un PDF
+
+==== Master 1
+
+par::[{year},m1]
+
+==== Master 2
+
+par::[{year},m2]
+
+=== Comment déposer un rapport Antora
+
+Pour déposer le rapport Antora il suffit de suivre les étapes pour le rapport PDF 
+excepté que vous n'avez pas à déposer votre rapport PDF mais à mettre le lien vers
+le site antora de votre rapport dans `modules/{master}/partials/rapports.adoc`.
+
+NOTE: votre présentation sera au format PDF.
